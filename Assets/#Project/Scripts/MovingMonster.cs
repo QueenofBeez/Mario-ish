@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-public class MovingMonster : Monster // va hériter de toutes les capacités de la classe Monster
+public class MovingMonster : Monster // va hériter de toutes les capacités de la classe Monster 
 {
 
     [Tooltip("Monster speed")]
@@ -64,7 +64,7 @@ public class MovingMonster : Monster // va hériter de toutes les capacités de 
         Debug.DrawRay(start, direction * hitRange, Color.green);
         RaycastHit2D hit = Physics2D.Raycast(start, direction, hitRange);
 
-        if(hit.collider != null)
+        if(hit.collider != null && !hit.transform.CompareTag("Player"))
         {
             speed.x *= -1;
         }

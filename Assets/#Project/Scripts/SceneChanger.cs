@@ -55,4 +55,9 @@ void Start()
             SceneManager.LoadScene(index + 1);
             //Debug.Log("ok I'm in");
     }
+
+        public void Exit()
+    {
+        Application.Quit();
+    }   
 }
